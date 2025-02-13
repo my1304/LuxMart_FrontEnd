@@ -1,0 +1,37 @@
+.settings {
+  width: 80%; /* длина панели Sidebar.module.css(calc(20%-10px)) + global.css(20px)  + Cart.module.css && Settings.module.css(80%)*/
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab:hover {
+    background-color: var(--violet);
+  }
+  
+  .tab.active {
+    background-color: var(--violet-dark); /* Цвет активной вкладки */
+    color: white;
+  }
+  
+  .tabContent {
+    padding: 20px;
+    border-radius: 0 8px 8px 8px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

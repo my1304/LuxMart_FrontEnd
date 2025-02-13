@@ -1,0 +1,40 @@
+.sidebar {
+  width: calc(20% - 10px);/* длина панели Sidebar.module.css(calc(20%-10px)) + global.css(20px)  + Cart.module.css && Settings.module.css(80%)*/
+  padding: 24px;
+  height: 423px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.menu {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.link {
+  color: var(--dark-sea);
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: capitalize;
+}
+
+.link:hover {
+  color: var(--violet-dark);
+}
+
+.link.active {
+  color: var(--violet);
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
