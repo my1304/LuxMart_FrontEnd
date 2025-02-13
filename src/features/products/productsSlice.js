@@ -22,7 +22,7 @@ export const postProduct = createAsyncThunk(
     'products/postProduct',
     async (productData, { rejectWithValue }) => {
       try {
-        const response = await axios.post(`${BASE_URL}/products`, productData, { withCredentials: true });
+        await axios.post(`${BASE_URL}/products`, productData, { withCredentials: true });
       } catch (error) {
         return rejectWithValue(error.response.data);
       }
