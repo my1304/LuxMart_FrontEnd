@@ -1,0 +1,112 @@
+.order {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Полоса заголовка */
+.titleBar {
+  background: #0078d7; /* Цвет полосы, как в Windows */
+  padding: 3px;
+  display: flex;
+  justify-content: right; /* Крестик с права */
+  align-items: top;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Крестик для закрытия */
+.closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.closeBtn:hover {
+  color: rgb(255, 0, 200); /* Цвет крестика при наведении */
+}
+
+.title {
+  color: rgb(17, 15, 15);
+  text-decoration: underline;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.table {  
+  border-collapse: collapse; /* Убирает двойные границы между ячейками */
+  table-layout: fixed; /* Фиксированная ширина таблицы */
+  border: 3px solid #6d6767; /* Граница для таблицы */
+  width: 100%;
+
+}
+
+.table th{
+  background-color: #dddada;
+  color: rgb(5, 5, 5);
+  height: 50px; /* Фиксированная высота для заголовков */
+  text-align: center;
+  vertical-align: middle; /* Центрирование по вертикали */
+  border: 3px solid #6d6767; /* Граница для таблицы */
+}
+
+.th1, th3 {
+  width: 11%;
+}
+
+.th2 {
+  width: 21%;
+}
+.th4{
+  width: 40%;
+}
+
+.th5{
+  width: 8%;
+}
+.th6{
+  width: 15%;
+}
+
+.table td {
+  color:rgb(0, 0, 0);
+  text-align: left;
+  vertical-align: middle;
+  border: 1px solid #6d6767;
+  font-size: 14px;
+  height: 25px; /* Фиксированная высота для таблицы */
+  word-wrap: break-word; /* перенос текста */
+}
+
+.td3 { /*.table tr td:nth-child(5) { !important*/
+  text-align: right !important;
+}
+
+.row {
+  background-color: #f0f0f0;
+  cursor: pointer;
+
+}
+
+.row:hover {
+  background-color: #8ccca6; /* Подсветка строки при наведении */
+}
+
+.activeRow {
+  background-color: #4fb2be !important; /* Убедиться, что стиль применен */
+}
+.rowdata {
+    background-color: #f0f0f0;
+}
