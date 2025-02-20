@@ -72,7 +72,13 @@ export const loginUser = createAsyncThunk(
     try {
       // Запрос на логин
       const loginResponse = await axios.post(`${BASE_URL}/auth/login`, payload, {
-        withCredentials: true, // Включение куков в запросе
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        /*
+          withCredentials: true, // Включение куков в запросе
+          */
       });
 
       // Извлечение токена доступа из ответа
@@ -98,7 +104,6 @@ export const loginUser = createAsyncThunk(
     }
   }
 );
-
 
 export const updateUser = createAsyncThunk(
   "users/updateUser",

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/LuxMart_FrontEnd-Anfang.iml" filepath="$PROJECT_DIR$/.idea/LuxMart_FrontEnd-Anfang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LuxMart_FrontEnd.iml" filepath="$PROJECT_DIR$/.idea/LuxMart_FrontEnd.iml" />
     </modules>
   </component>
 </project>
