@@ -70,7 +70,6 @@ export const loginUser = createAsyncThunk(
   "users/loginUser",
   async (payload, thunkAPI) => {
     try {
-      alert(payload);
       // Запрос на логин
       const loginResponse = await axios.post(`${BASE_URL}/auth/login`, payload, {
         headers: {
@@ -81,7 +80,7 @@ export const loginUser = createAsyncThunk(
           withCredentials: true, // Включение куков в запросе
           */
       });
-
+      alert("Ok");
       // Извлечение токена доступа из ответа
       const accessToken = loginResponse.data.access_token;
 
