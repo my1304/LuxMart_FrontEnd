@@ -70,6 +70,7 @@ export const loginUser = createAsyncThunk(
   "users/loginUser",
   async (payload, thunkAPI) => {
     try {
+      alert(payload);
       // Запрос на логин
       const loginResponse = await axios.post(`${BASE_URL}/auth/login`, payload, {
         headers: {
