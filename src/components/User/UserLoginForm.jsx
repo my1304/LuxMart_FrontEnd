@@ -21,7 +21,7 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
     const isNotEmpty = Object.values(values).every((val) => val);
 
     if (!isNotEmpty) return;
-    alert(JSON.stringify(values, null, 2));
+    //alert(JSON.stringify(values, null, 2));
     dispatch(loginUser(values));
     closeForm();
   };

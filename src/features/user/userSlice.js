@@ -67,7 +67,19 @@ export const fetchUserById = createAsyncThunk(
 
 
 export const loginUser = createAsyncThunk(
-  "users/loginUser",
+
+    fetch("https://luxmart-backend-rv9s.onrender.com/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email: "slav@mail.com", password: "Qwerty!123" })
+    })
+        .then(response => response.json())
+        .then(data => console.log("Response:", data))
+        .catch(error => console.error("Error:", error))
+
+    /*  "users/loginUser",
   async (payload, thunkAPI) => {
     try {
       // Запрос на логин
@@ -76,11 +88,11 @@ export const loginUser = createAsyncThunk(
           "Content-Type": "application/json",
         },
 
-        /*
-          withCredentials: true, // Включение куков в запросе
-          */
+
+        //  withCredentials: true, // Включение куков в запросе
+
       });
-      alert("Ok");
+
       // Извлечение токена доступа из ответа
       const accessToken = loginResponse.data.access_token;
 
@@ -103,6 +115,8 @@ export const loginUser = createAsyncThunk(
       return thunkAPI.rejectWithValue(err);
     }
   }
+
+ */
 );
 
 export const updateUser = createAsyncThunk(
