@@ -70,26 +70,20 @@ export const loginUser = createAsyncThunk(
       "users/loginUser",
   async (payload, thunkAPI) => {
     try {
-      // Запрос на логин
-      const loginResponse = await axios.post(`${BASE_URL}/auth/login`, payload,  { withCredentials: true });
-      alert("Ok");
-
-      // Извлечение токена доступа из ответа
-      const accessToken = loginResponse.data.access_token;
-
-      // Сохранение токена в localStorage
-      localStorage.setItem("accessToken", accessToken);
-
-      // Запрос на получение профиля
-      const profileResponse = await axios.get(`${BASE_URL}/auth/profile`, {
-        withCredentials: true, // Включение куков в запросе
+      fetch("https://luxmart-backend-rv9s.onrender.com/api/auth/login", {
+        method: "POST",
         headers: {
-          Authorization: `Bearer ${accessToken}`, // Использование токена в заголовке
+          "Content-Type": "application/json"
         },
-      });
+        body: JSON.stringify({ email: "slav@mail.com", password: "Qwerty!123" }),
+        mode: "cors"
+      })
+          .then(response => response.json())
+          .then(data => console.log("Response:", data))
+          .catch(error => console.error("Error:", error));
 
       // Возвращение данных профиля
-      return profileResponse.data;
+      return;
     } catch (err) {
       showAlert('Data entry error');
             console.log(err);
