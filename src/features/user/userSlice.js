@@ -72,6 +72,7 @@ export const loginUser = createAsyncThunk(
     try {
       fetch("https://luxmart-backend-rv9s.onrender.com/api/auth/login", {
         method: "POST",
+        credentials: 'include', // Важно для передачи кук
         headers: {
           "Content-Type": "application/json"
         },
