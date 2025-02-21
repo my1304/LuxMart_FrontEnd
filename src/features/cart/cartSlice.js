@@ -15,6 +15,7 @@ export const addItemToCart = createAsyncThunk(
         quantity,
       }, { withCredentials: true, // Включение куков в запросе
       });
+      alert("OK")
       return response.data;
     } catch (error) {
       showAlert("Error - " + error.message)

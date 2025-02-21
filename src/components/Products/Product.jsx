@@ -34,7 +34,7 @@ const Product = (item) => {
     }
    // alert("Product [ " + title + " ] will be added to cart!");
     dispatch(addItemToCart({ userId: user.id, productId: id, quantity: 1 }));
-    window.location.reload();
+  //  window.location.reload();
   };
 
   return (
