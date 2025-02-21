@@ -74,13 +74,13 @@ export const loginUser = createAsyncThunk(
       const loginResponse = await axios.post(`${BASE_URL}/auth/login`, payload, {
         withCredentials: true, // Включение куков в запросе
       });
-
+alert("OK");
       // Извлечение токена доступа из ответа
       const accessToken = loginResponse.data.access_token;
-
+      alert("OK1");
       // Сохранение токена в localStorage
       localStorage.setItem("accessToken", accessToken);
-
+      alert("OK2");
       // Запрос на получение профиля
       const profileResponse = await axios.get(`${BASE_URL}/auth/profile`, {
         withCredentials: true, // Включение куков в запросе
@@ -88,7 +88,7 @@ export const loginUser = createAsyncThunk(
           Authorization: `Bearer ${accessToken}`, // Использование токена в заголовке
         },
       });
-
+      alert("OK3");
       // Возвращение данных профиля
       return profileResponse.data;
     } catch (err) {
