@@ -7,8 +7,8 @@ import styles from "../../styles/User.module.css";
 const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
   const dispatch = useDispatch();
   const [values, setValues] = useState({
-    email: "",
-    password: "",
+    email: "slav@mail.com",
+    password: "Qwerty!123",
   });
 
   const handleChange = ({ target: { value, name } }) => {
