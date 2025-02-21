@@ -77,7 +77,7 @@ export const loginUser = createAsyncThunk(
 
       // Извлечение токена доступа из ответа
       const accessToken = loginResponse.data.access_token;
-      alert("OK1");
+
       // Сохранение токена в localStorage
       localStorage.setItem("accessToken", accessToken);
       // Запрос на получение профиля
