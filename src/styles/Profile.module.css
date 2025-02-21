@@ -1,0 +1,42 @@
+.profile {
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.group {
+  width: 100%;
+  background: #7c787c;
+  border-radius: 8px;
+  color: var(--light);
+  padding: 12px 24px;
+}
+
+.group input {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px; /* Добавьте отступ сверху по необходимости */
+}
+
+.uploadLabel {
+  background: var(--violet-dark);
+  border-radius: 6px;
+  padding: 9px 20px;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.uploadLabel:hover {
+  background-color: var(--violet);
+}

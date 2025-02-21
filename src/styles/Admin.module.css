@@ -1,0 +1,101 @@
+.panel {
+    width: calc(100% - 324px);
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab:hover {
+    background-color: var(--violet);
+  }
+  
+  .tab.active {
+    background-color: var(--violet-dark); /* Цвет активной вкладки */
+    color: white;
+  }
+  
+  .tabContent {
+    padding: 20px;
+    border-radius: 0 8px 8px 8px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  
+  .group {
+    width: 100%;
+    background: #1515a0;
+    border-radius: 8px;
+    color: var(--light);
+    padding: 12px 24px;
+  }
+  
+  .group input {
+    width: 100%;
+  }
+  .fieldName {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 16px;
+    color: var(--violet);
+    text-align: right;
+  }
+
+  .fieldNameImage {
+    display: flex;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 16px;
+    color: var(--violet);
+    text-align: right;
+  }
+
+  .userData {
+    color: var(--sea);
+  }
+
+  .userData p {
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(141, 123, 123, 0.1);
+  }
+
+  .error {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--red);
+    box-shadow: 0px 4px 8px rgba(141, 123, 123, 0.1);
+  }
+
+  .images {
+    display: flex;
+    gap: 20px;
+  }
+
+  .image {
+    width: 50%;
+    height: 230px;
+    display: block; /* Превращаем изображение в блочный элемент */
+    margin: 0 auto; /* Автоматически центрируем по горизонтали */
+    border-radius: 8px; /* Закругляем углы */
+}
