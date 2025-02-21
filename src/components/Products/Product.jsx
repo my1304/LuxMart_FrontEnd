@@ -32,9 +32,9 @@ const Product = (item) => {
       alert("Product [ " + title + " ] is already in your cart!");
       return;
     }
-   // alert("Product [ " + title + " ] will be added to cart!");
+    alert("Product [ " + title + " ] will be added to cart!");
     dispatch(addItemToCart({ userId: user.id, productId: id, quantity: 1 }));
-  //  window.location.reload();
+    window.location.reload();
   };
 
   return (
