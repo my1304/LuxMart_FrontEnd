@@ -22,21 +22,24 @@ const Product = (item) => {
 
   const isInCart = cartItems && cartItems.some((item) => item.productId === id);
 
-  const addToCart = () => {    
+  const addToCart = async () => {
     if (!isAuthenticated) {
-      alert("Please log in to add items to your cart.");
+      await showAlert("Please log in to add items to your cart.");
       return;
     }
 
     if (isInCart) {
-      alert("Product [ " + title + " ] is already in your cart!");
+      await showAlert("Product [ " + title + " ] is already in your cart!");
       return;
     }
-    alert("Product [ " + title + " ] will be added to cart!");
     dispatch(addItemToCart({ userId: user.id, productId: id, quantity: 1 }));
-    window.location.reload();
-  };
+    await showAlert(`Product [ ${title} ] will be added to cart!`);
+    window.location.href = ROUTES.HOME;   // Перенаправление на главную страницу
 
+    //window.location.href = `${ROUTES.PRODUCT}/${id}`;
+    // Закрыть продукт (вернуться на предыдущую страницу)
+    //window.history.back();
+  };
   return (
     <section className={styles.product}>
       <div className={styles.images}>
