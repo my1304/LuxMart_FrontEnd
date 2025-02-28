@@ -5,6 +5,7 @@ import { ROUTES } from "../../utils/routes";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart, selectCartItems } from "../../features/cart/cartSlice";
 import { selectCurrentUser } from "../../features/user/userSlice";
+import showAlert from "../../components/MessageForms/AlertService";
 
 const Product = (item) => {
   const { id, title, price, imageUrls, description } = item;
