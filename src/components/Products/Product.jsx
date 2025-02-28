@@ -41,41 +41,42 @@ const Product = (item) => {
     // Закрыть продукт (вернуться на предыдущую страницу)
     //window.history.back();
   };
-  return (
-    <section className={styles.product}>
-      <div className={styles.images}>
-        <div
-          className={styles.current}
-          style={{ backgroundImage: `url(${currentImage})` }}
-        />
-        <div className={styles["images-list"]}>
-          {imageUrls.map((image, i) => (
-            <div
-              key={i}
-              className={styles.image}
-              style={{ backgroundImage: `url(${image})` }}
-              onClick={() => setCurrentImage(image)}
-            />
-          ))}
-        </div>
-      </div>
 
-      <div className={styles.info}>
-        <h1 className={styles.title}>{title}</h1>
-        <div className={styles.price}>{price}$</div>
-        <p className={styles.description}>{description}</p>
-        {!isAuthenticated ? (
-          <p></p>
-        ):(
-          <div className={styles.actions}>
-            <button onClick={addToCart} className={styles.add} >Add to cart</button>
+  return (
+      <section className={styles.product}>
+        <div className={styles.images}>
+          <div
+              className={styles.current}
+              style={{ backgroundImage: `url(${currentImage})` }}
+          />
+          <div className={styles["images-list"]}>
+            {imageUrls.map((image, i) => (
+                <div
+                    key={i}
+                    className={styles.image}
+                    style={{ backgroundImage: `url(${image})` }}
+                    onClick={() => setCurrentImage(image)}
+                />
+            ))}
           </div>
-        )}
-        <div className={styles.bottom}>
-          <Link to={ROUTES.HOME}>Return to store</Link>
         </div>
-      </div>
-    </section>
+
+        <div className={styles.info}>
+          <h1 className={styles.title}>{title}</h1>
+          <div className={styles.price}>{price}$</div>
+          <p className={styles.description}>{description}</p>
+          {!isAuthenticated ? (
+              <p></p>
+          ):(
+              <div className={styles.actions}>
+                <button onClick={addToCart} className={styles.add} >Add to cart</button>
+              </div>
+          )}
+          <div className={styles.bottom}>
+            <Link to={ROUTES.HOME}>Return to store</Link>
+          </div>
+        </div>
+      </section>
   );
 };
 
